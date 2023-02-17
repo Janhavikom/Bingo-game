@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Make Your Own Bingo Card</title>
+    <link rel="stylesheet" rev="stylesheet" href="bingo-card.css" />
+    <script type="text/javascript" src="bingo-card.js"></script>
+  </head>
+
+  <body>
+    <h1
+      style="
+        text-align: center;
+        color: red;
+        padding-bottom: 50px;
+        padding-top: 10px;
+      "
+    >
+      Create A Bingo Card
+    </h1>
+    <table>
+      <tr>
+        <th width="20%">B</th>
+        <th width="20%">I</th>
+        <th width="20%">N</th>
+        <th width="20%">G</th>
+        <th width="20%">O</th>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id)" id="square0">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square1">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square2">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square3">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square4">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id)" id="square5">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square6">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square7">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square8">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square9">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id)" id="square10">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square11">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square24">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square12">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square13">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id)" id="square14">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square15">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square16">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square17">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square18">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id)" id="square19">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square20">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square21">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square22">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id)" id="square23">&nbsp;</td>
+      </tr>
+    </table>
+	<div>
+    <button type="button" style="background:pink;padding:15px;display: inline-block;" onclick="refresh()">Refresh</button>
+    <button type="button" style="background:pink;padding:15px;text-align: right;display: inline-block;" onclick="refresh()" >
+      <a href="bingo-card.html" id="reload">New Game</a>
+	</button>
+</div>
+  </body>
+  <script>
+    // $(function () {
+    // 	$(".tile").click(function () {
+    // 		$(this).css('background-color', '#F66');
+    // 	});
+    // });
+    function changecolor(p) {
+      console.log("here");
+      const myElement = document.getElementById(p);
+      console.log(myElement);
+      myElement.style.backgroundColor = "#ADD8E6";
+    }
+    function refresh() {
+    //   console.log("here");
+      const myElement = document.getElementsByClassName("tile");
+      for (let i = 0; i < myElement.length; i++) {
+        myElement[i].style.backgroundColor = "#ffffff";
+      }
+    //   console.log(myElement);
+    //   myElement.style.backgroundColor = "#000000";
+    }
+  </script>
+</html>
