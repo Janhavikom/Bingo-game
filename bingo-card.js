@@ -393,17 +393,24 @@ function changecolor(p) {
   myElement.style.backgroundColor = "#ADD8E6";
 }
 function refresh() {
-  location.reload();
+  // location.reload();
   // //   console.log("here");
-  // const myElement = document.getElementsByClassName("tile");
-  // for (let i = 0; i < myElement.length; i++) {
-  //   myElement[i].style.backgroundColor = "orange";
-  // }
-  // count = 0;
-  // counter = 0;
-  // getcolor();
-  //   console.log(myElement);
-  //   myElement.style.backgroundColor = "#000000";
+  const myElement = document.getElementsByClassName("tile");
+  for (let i = 0; i < myElement.length; i++) {
+    myElement[i].style.backgroundColor = "orange";
+  }
+  count = 0;
+  counter = 0;
+  value1 = 0;
+  value2 = 0;
+  value3 = 0;
+  value4 = 0;
+  value5 = 0;
+  value6 = 0;
+  value7 = 0;
+  value8 = 0;
+  value9 = 0;
+  value10 = 0;
 }
 
 function alert() {
