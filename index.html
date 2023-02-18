@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Janhavi-Arpita Bingo</title>
+    <link rel="stylesheet" rev="stylesheet" href="bingo-card.css" />
+  </head>
+  <script type="text/javascript" src="bingo-card.js"></script>
+  <body>
+    <h1
+      style="
+        text-align: center;
+        color: white;
+        padding-bottom: 50px;
+        padding-top: 10px;
+      "
+    >
+      Let's Play Bingo !!
+    </h1>
+    <div id="main-div">
+    <table>
+      <tr>
+        <th id="textb" style="background:rgb(106, 106, 242);color:white;" width="20%">B</th>
+        <th id="texti" style="background:rgb(106, 106, 242);color:white;" width="20%">I</th>
+        <th id="textn" style="background:rgb(106, 106, 242);color:white;" width="20%">N</th>
+        <th id="textg" style="background:rgb(106, 106, 242);color:white;" width="20%">G</th>
+        <th id="texto" style="background:rgb(106, 106, 242);color:white;" width="20%">O</th>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square0">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square1">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square2">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square3">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square4">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square5">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square6">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square7">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square8">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square9">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square10">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square11">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square24">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square12">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square13">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square14">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square15">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square16">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square17">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square18">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square19">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square20">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square21">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square22">&nbsp;</td>
+        <td class="tile" onclick="changecolor(id),getcolor()" id="square23">&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+	<div>
+    <button type="button" style="color:white;background:rgb(20, 94, 198);padding:15px;display: inline-block;" onclick="refresh()">Refresh</button>
+    <button type="button" style="color:white;background:rgb(169, 200, 243);padding:15px;text-align: right;display: inline-block;" onclick="refresh()" >
+      <a href="index.html" id="reload">New Game</a>
+	</button>
+</div>
+
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
