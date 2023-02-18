@@ -367,7 +367,7 @@ function getcolor() {
     }
   }
 
-  // console.log(count);
+  console.log(count);
   if (count == 5) {
     onerow.pause();
     win.play();
@@ -393,13 +393,15 @@ function changecolor(p) {
   myElement.style.backgroundColor = "#ADD8E6";
 }
 function refresh() {
-  //   console.log("here");
-  const myElement = document.getElementsByClassName("tile");
-  for (let i = 0; i < myElement.length; i++) {
-    myElement[i].style.backgroundColor = "orange";
-  }
-  count = 0;
-  counter = 0;
+  location.reload();
+  // //   console.log("here");
+  // const myElement = document.getElementsByClassName("tile");
+  // for (let i = 0; i < myElement.length; i++) {
+  //   myElement[i].style.backgroundColor = "orange";
+  // }
+  // count = 0;
+  // counter = 0;
+  // getcolor();
   //   console.log(myElement);
   //   myElement.style.backgroundColor = "#000000";
 }
