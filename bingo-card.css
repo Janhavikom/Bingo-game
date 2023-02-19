@@ -47,9 +47,8 @@ td {
 #heading {
   /* text-align: center; */
   color: white;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   padding-top: 10px;
-  padding-right: 50px;
   display: inline-block;
 }
 
