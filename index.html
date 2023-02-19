@@ -1,79 +1,199 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Janhavi-Arpita Bingo</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" rev="stylesheet" href="bingo-card.css" />
+    <title>Bingo Game</title>
   </head>
-  <body>
-    <div style="text-align: center;">
-    <h1
-      style="
+  <style>
+    @media (max-width: 680px) {
+      /* … */
+      th,
+      td {
+        height: 100px !important;
+        width: 100px !important;
+        border: 3px #ffffff solid;
         text-align: center;
-        color: white;
-        padding-bottom: 50px;
-        padding-top: 10px;
-        padding-right:50px;
-        display: inline-block;
-      "
-    >
-      Let's Play Bingo !!
-    </h1>
-    <button type="button" style="font-weight:bold;border-radius:20px;display: inline-block;color:white;background:rgb(184, 45, 26);padding:15px;text-align: right;display: inline-block;" onclick="refresh()" >
-      <a style="color:white;text-decoration:none" href="index.html" id="reload">NEW GAME</a>
-	</button>
-</div>
+        font-size: 24px;
+        font-weight: bold;
+        background-color: orange;
+        color: black;
+      }
+    }
+  </style>
+  <body>
+    <div style="text-align: center">
+      <h1
+        style="
+          text-align: center;
+          color: white;
+          padding-bottom: 50px;
+          padding-top: 10px;
+          padding-right: 50px;
+          display: inline-block;
+        "
+      >
+        Let's Play Bingo !!
+      </h1>
+      <button
+        type="button"
+        style="
+          font-weight: bold;
+          border-radius: 20px;
+          display: inline-block;
+          color: white;
+          background: rgb(184, 45, 26);
+          padding: 15px;
+          text-align: right;
+          display: inline-block;
+        "
+        onclick="refresh()"
+      >
+        <a
+          style="color: white; text-decoration: none"
+          href="index.html"
+          id="reload"
+          >NEW GAME</a
+        >
+      </button>
+    </div>
     <div id="main-div">
-    <table>
-      <tr>
-        
-        <th onclick="changebingo()" id="textb" style="background:rgb(106, 106, 242);color:white;" width="20%">B</th>
-        <th id="texti" onload="changebingo()" style="background:rgb(106, 106, 242);color:white;" width="20%">I</th>
-        <th id="textn" onload="changebingo()" style="background:rgb(106, 106, 242);color:white;" width="20%">N</th>
-        <th id="textg" onload="changebingo()" style="background:rgb(106, 106, 242);color:white;" width="20%">G</th>
-        <th id="texto" onload="changebingo()" style="background:rgb(106, 106, 242);color:white;" width="20%">O</th>
-      </tr>
-      <tr>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square0">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square1">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square2">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square3">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square4">&nbsp;</td>
-      </tr>
-      <tr>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square5">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square6">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square7">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square8">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square9">&nbsp;</td>
-      </tr>
-      <tr>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square10">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square11">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square24">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square12">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square13">&nbsp;</td>
-      </tr>
-      <tr>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square14">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square15">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square16">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square17">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square18">&nbsp;</td>
-      </tr>
-      <tr>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square19">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square20">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square21">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square22">&nbsp;</td>
-        <td class="tile" onclick="changecolor(id),getcolor()" id="square23">&nbsp;</td>
-      </tr>
-    </table>
-  </div>
-	<div>
-    <!-- <button type="button" style="color:white;background:rgb(20, 94, 198);padding:15px;display: inline-block;" onclick="refresh()">NEW GAME</button> -->
-    
-</div>
-<script type="text/javascript" src="bingo-card.js"></script>
-
+      <table>
+        <tr>
+          <th
+            onclick="changebingo()"
+            id="textb"
+            style="background: rgb(106, 106, 242); color: white"
+            width="20%"
+          >
+            B
+          </th>
+          <th
+            id="texti"
+            onload="changebingo()"
+            style="background: rgb(106, 106, 242); color: white"
+            width="20%"
+          >
+            I
+          </th>
+          <th
+            id="textn"
+            onload="changebingo()"
+            style="background: rgb(106, 106, 242); color: white"
+            width="20%"
+          >
+            N
+          </th>
+          <th
+            id="textg"
+            onload="changebingo()"
+            style="background: rgb(106, 106, 242); color: white"
+            width="20%"
+          >
+            G
+          </th>
+          <th
+            id="texto"
+            onload="changebingo()"
+            style="background: rgb(106, 106, 242); color: white"
+            width="20%"
+          >
+            O
+          </th>
+        </tr>
+        <tr>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square0">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square1">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square2">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square3">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square4">
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square5">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square6">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square7">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square8">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square9">
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square10">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square11">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square24">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square12">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square13">
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square14">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square15">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square16">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square17">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square18">
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square19">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square20">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square21">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square22">
+            &nbsp;
+          </td>
+          <td class="tile" onclick="changecolor(id),getcolor()" id="square23">
+            &nbsp;
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <!-- <button type="button" style="color:white;background:rgb(20, 94, 198);padding:15px;display: inline-block;" onclick="refresh()">NEW GAME</button> -->
+    </div>
+    <script type="text/javascript" src="bingo-card.js"></script>
   </body>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>
