@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
-	background-color: rgb(55, 50, 50);
-	color: white;
-	font-size: 20px;
-	font-family: 'Poppins', sans-serif;}
+  background-color: rgb(55, 50, 50);
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
 
-h1, th {
-	font-family: Georgia, "Times New Roman", Times, serif;
+h1,
+th {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* #main-div{
@@ -18,29 +20,46 @@ h1, th {
 	align-items: center;
 } */
 h1 {
-	font-size: 28px;
+  font-size: 28px;
 }
 
 table {
-	border-collapse: collapse;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	/* background-color: orange; */
-	/* width: fit-content; */
+  border-collapse: collapse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: orange; */
+  /* width: fit-content; */
 }
 
-th, td {
-	height:60px;
-	width:60px;
-	border: 3px #ffffff solid;
-	text-align: center;
-	font-size: 24px;
-	font-weight: bold;
-	background-color: orange;
-	color: black;
+th,
+td {
+  height: 60px;
+  width: 60px;
+  border: 3px #ffffff solid;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: orange;
+  color: black;
 }
 
-#free {
-	background-color: #F66;
+#heading {
+  /* text-align: center; */
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-right: 50px;
+  display: inline-block;
+}
+
+#heading-button {
+  font-weight: bold;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;
+  background: rgb(184, 45, 26);
+  padding: 15px;
+  text-align: right;
+  margin-bottom: 30px;
 }
