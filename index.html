@@ -10,53 +10,30 @@
   <style>
     @media (max-width: 680px) {
       #main-div {
-    width:100% !important;
-    height:100%;
+        width: 100% !important;
+        height: 100%;
+      }
+      table {
+        margin: 0 auto;
+      }
 
-  }
-  table {
-    margin: 0 auto;
-  }
-
-  th, td {
-	border: 3px #ffffff solid;
-	text-align: center;
-	font-size: 24px;
-	font-weight: bold;
-	background-color: orange;
-	color: black;
-}
-
+      th,
+      td {
+        border: 3px #ffffff solid;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: orange;
+        color: black;
+      }
     }
+
+    
   </style>
   <body>
     <div style="text-align: center">
-      <h1
-        style="
-          text-align: center;
-          color: white;
-          padding-bottom: 50px;
-          padding-top: 10px;
-          padding-right: 50px;
-          display: inline-block;
-        "
-      >
-        Let's Play Bingo !!
-      </h1>
-      <button
-        type="button"
-        style="
-          font-weight: bold;
-          border-radius: 20px;
-          display: inline-block;
-          color: white;
-          background: rgb(184, 45, 26);
-          padding: 15px;
-          text-align: right;
-          display: inline-block;
-        "
-        onclick="refresh()"
-      >
+      <h1 id="heading">Let's Play Bingo !!</h1>
+      <button id="heading-button" type="button" onclick="refresh()">
         <a
           style="color: white; text-decoration: none"
           href="index.html"
@@ -72,7 +49,6 @@
             onclick="changebingo()"
             id="textb"
             style="background: rgb(106, 106, 242); color: white"
-            
           >
             B
           </th>
@@ -80,7 +56,6 @@
             id="texti"
             onload="changebingo()"
             style="background: rgb(106, 106, 242); color: white"
-            
           >
             I
           </th>
@@ -88,7 +63,6 @@
             id="textn"
             onload="changebingo()"
             style="background: rgb(106, 106, 242); color: white"
-           
           >
             N
           </th>
@@ -96,7 +70,6 @@
             id="textg"
             onload="changebingo()"
             style="background: rgb(106, 106, 242); color: white"
-            
           >
             G
           </th>
@@ -104,7 +77,6 @@
             id="texto"
             onload="changebingo()"
             style="background: rgb(106, 106, 242); color: white"
-          
           >
             O
           </th>
