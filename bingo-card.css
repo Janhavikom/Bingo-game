@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
-  //background: linear-gradient(to bottom, rgb(173, 83, 137), rgb(60, 16, 83));
   background-color: rgb(55, 50, 50);
   color: white;
   font-size: 20px;
@@ -50,6 +49,7 @@ td {
   color: white;
   padding-bottom: 25px;
   padding-top: 10px;
+  /* padding-right: 50px; */
   display: inline-block;
 }
 
